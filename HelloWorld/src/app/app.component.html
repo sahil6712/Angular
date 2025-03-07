@@ -11,7 +11,8 @@
   <img [src]="imgUrl" (click)="onClick($event)" alt="The Brigdelabz logo"/>
 </div>
 <div>
-  <input [(ngModel)] = "userName" /> <br/> <br/>
+  <input type="text" (input)="onInput($event)" [(ngModel)]="userName" placeholder="Enter name"/> 
+  <span class="error-output">{{ nameError }}</span>
 </div>
 
 <router-outlet></router-outlet> 
